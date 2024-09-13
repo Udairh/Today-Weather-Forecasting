@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="weather.js" defer></script>
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop id="bg-video">
+            <source src="videos/weather.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>    
+    <center>
+    <div class="weather-container">
+        <h1>Weather Forecast</h1>
+        <p id="current-date"></p> <!-- Date display -->
+
+        <div class="location-selection">
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+                <option value="">Select Country</option>
+                <option value="US">United States</option>
+                <option value="IN">India</option>
+            </select>
+
+            <label for="state">State:</label>
+            <select id="state" name="state">
+                <option value="">Select State</option>
+            </select>
+
+            <label for="city">City:</label>
+            <select id="city" name="city">
+                <option value="">Select City</option>
+            </select>
+        </div>
+
+        <button id="get-weather">Get Weather</button>
+
+        <div id="weather-result">
+            <h2 id="city-name"></h2>
+            <p id="temperature"></p>
+            <p id="humidity"></p>
+            <p id="rain-chances"></p>
+            <div id="forecast"></div>
+        </div>
+    </div>
+    </center>
+</body>
+</html>
